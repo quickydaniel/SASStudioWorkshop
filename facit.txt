@@ -1,0 +1,8 @@
+facit
+
+proc casutil sessref=&sysuserid._session;
+   droptable casdata="CARS_INFO" incaslib="DM" quiet; /* added this statement in case job is run again */
+   load data=SASDM.CARS_INFO outcaslib="DM"
+   casout="CARS_INFO" promote; /* loads SAS table to CAS and promotes table to global scope */
+run;
+
