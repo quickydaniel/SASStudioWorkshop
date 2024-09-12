@@ -1,4 +1,18 @@
 Koder
+
+%let folderUri=/folders/folders/3b2b14c4-deb6-4cb4-9e66-04ab17920720;
+
+%let BASE_URI=%sysfunc(getoption(servicesbaseurl));
+
+filename resp temp;
+proc http url="&base_uri.&folderUri./members?recursive=true%nrstr(&limit)=10000"
+	method='GET'
+	oauth_bearer=sas_services
+    out=resp;
+    
+    debug level=1;
+run; 
+
 /* Set Input and Output Data */
 data &outTable ;
 	set &inTable ;
