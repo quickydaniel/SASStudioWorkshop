@@ -1,5 +1,10 @@
 Koder
 
+https://gelenv.rext03-0312.race.sas.com/SASJobExecution/?_fileid=d0d88465-1727-4807-bcd6-5c7ef82cb243
+
+
+Få alla members
+https://gelenv.rext03-0312.race.sas.com/folders/folders/a1d607c2-bd9b-47f8-9794-4dbe406bd563/members
 %let folderUri=/folders/folders/3b2b14c4-deb6-4cb4-9e66-04ab17920720;
 
 %let BASE_URI=%sysfunc(getoption(servicesbaseurl));
